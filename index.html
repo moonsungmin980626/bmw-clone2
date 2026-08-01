@@ -1,121 +1,66 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMW Clone</title>
-    <script src="https://kit.fontawesome.com/69647d3808.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        header{
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            padding: 50px 100px;
+        }
+        .left_menu{
+            display: flex;
+            text-align: center;
 
-body{
-    font-family:Arial, sans-serif;
-    background-color: black;
-}
+        }
+        .menu{
+            text-align: center;
+        }
+        .menu ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            text-align: center;
 
-header{
-  display: flex;
-      align-items:center;
-          justify-content:space-between;
-  
-
-    padding:20px 80px;
-
-}
-
-.logo img{
-    width:55px;
-}
-
-.menu ul{
-        display:flex;    
-        gap:38px;
-
-
-}
-.right ul{
-    display: flex;
-        gap:28px;
-
-}
-
-.left{
-    display:flex;
-    align-items:center;
-}
+        }
+        .right_menu{
+            text-align: center;
+            gap: 30px;
+            display: flex;
+        }
+        .right_menu i{
+        }
     </style>
+
 </head>
 <body>
+    <header>
+        <div class="left_menu">
+            <div class="logo">
+                <img src="https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg" alt="">
+            </div>
 
-<header>
-
-    <div class="left">
-        <div class="logo">
-            <img src="https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg" alt="BMW">
+            <div class="menu">
+                <ul>
+                    <li>모델 내 차량 만들기</li>
+                    <li>전기차</li>
+                    <li>구매하기</li>
+                    <li>더 알아보기</li>
+                    <li>BMW 드라이빙 센터</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="menu">
-            <ul>
-                <li><a href="#">모델</a></li>
-                <li><a href="#">전기차</a></li>
-                <li><a href="#">구매</a></li>
-                <li><a href="#">서비스</a></li>
-            </ul>
+        <div class="right_menu">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-regular fa-heart"></i>
         </div>
-    </div>
-
-    <div class="right">
-            <ul>
-                <li><a href=""><i class="fa-regular fa-user"></i></a></li>
-                <li><a href=""> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href=""> <i class="fa-solid fa-location-dot"></i></a></li>
-                <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-            </ul>
-    </div>
-               
-               
-              
-
-
-
-</header>
-
-<!-- <section class="hero">
-    <div class="overlay">
-        <h1>THE NEW BMW</h1>
-        <p>Sheer Driving Pleasure</p>
-        <button>자세히 보기</button>
-    </div>
-</section> -->
-<!-- 
-<section class="cars">
-
-    <div class="card">
-        <img src="images/car1.jpg">
-        <h3>BMW X5</h3>
-    </div>
-
-    <div class="card">
-        <img src="images/car2.jpg">
-        <h3>BMW M4</h3>
-    </div>
-
-    <div class="card">
-        <img src="images/car3.jpg">
-        <h3>BMW i5</h3>
-    </div>
-
-</section> -->
-
-<!-- <footer>
-    Copyright © BMW Clone
-</footer>
-
-<script src="js/script.js"></script> -->
-
+    </header>
 </body>
 </html>
