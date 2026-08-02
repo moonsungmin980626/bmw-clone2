@@ -41,11 +41,24 @@
             display: flex;
             gap: 30px;
             text-align: center;
-
+        }
+        .menu li{
+            display: flex;
+            overflow: hidden;
         }
         .menu a{
             text-decoration: none;
             color: white;
+        }
+        .electricitycar{
+            position: relative;
+        }
+        .submenu{
+            /* position: absolute;
+            top: 100%;
+            left: 0; */
+            max-height: 0;
+            overflow: hidden;
         }
         .right_menu{
             /* text-align: center; */
@@ -82,7 +95,23 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">모델 내 차량 만들기</a></li>
-                    <li><a href="#">전기차 <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li class="electricitycar">
+                        <a href="#">전기차 <i class="fa-solid fa-chevron-down"></i></a>
+                        
+                        <div class="submenu">
+                            <div class="submenu_left">
+                                <a href="">BMW 전기차</a>
+                                <a href="">BMW 순수 전기 모델</a>
+                                <a href="">BMW 플러그인 하이브리드 모델</a>
+                            </div>
+
+                            <div class="submenu_right">
+                                <a href="">BMW 차징 & 배터리</a>
+                                <a href="">BMW 차징</a>
+                                <a href="">BMW 차징 앱</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">구매하기 <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">더 알아보기 <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#"><strong>BMW</strong> 드라이빙 센터</a></li>
