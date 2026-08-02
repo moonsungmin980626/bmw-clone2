@@ -17,15 +17,18 @@
             padding: 20px 100px;
             border-bottom: 1px solid white;
             align-items: center;
+            /* margin-left: 100px; */
         }
         .left_menu{
             display: flex;
             align-items: center;
+            gap: 60px;
         }
         .logo{
             /* margin-right: 50px; */
         }
         .logo img{
+            cursor: pointer;
             width: 50px;
         }
         .menu{
@@ -52,10 +55,19 @@
             color: white;
         }
         .right_menu i{
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .icon{
+
         }
         body{
             height: 100vh;
-            background: url("https://bmw.scene7.com/is/image/BMW/spiderman_NA5_promotion1:16to7?fmt=webp&wid=1919&fit=wrap%2C+1") no-repeat center center / cover;
+            background:  linear-gradient(
+            rgba(67, 66, 66, 0.45),
+            rgba(36, 36, 36, 0.45)
+        ),url("https://bmw.scene7.com/is/image/BMW/spiderman_NA5_promotion1:16to7?fmt=webp&wid=1919&fit=wrap%2C+1") no-repeat center center / cover;
+            
         }
     </style>
 
@@ -70,9 +82,9 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">모델 내 차량 만들기</a></li>
-                    <li><a href="#">전기차</a></li>
-                    <li><a href="#">구매하기</a></li>
-                    <li><a href="#">더 알아보기</a></li>
+                    <li><a href="#">전기차 <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">구매하기 <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">더 알아보기 <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#"><strong>BMW</strong> 드라이빙 센터</a></li>
                 </ul>
             </div>
