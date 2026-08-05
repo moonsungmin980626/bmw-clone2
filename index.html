@@ -1,3 +1,4 @@
+<!--  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,19 @@
             display: flex;
             justify-content: space-between;
             padding: 20px 100px;
-            border-bottom: 1px solid white;
+            /* border-bottom: 1px solid white; */
             align-items: center;
             /* margin-left: 100px; */
             position: relative;
+        }
+        header::after{
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:100px;
+            right:100px;
+            height:1px;
+            background:white;
         }
         .left_menu{
             display: flex;
@@ -33,7 +43,7 @@
             width: 50px;
         }
         .menu{
-            text-align: center;
+            /* text-align: center; */
             color: white;
         }
         .menu ul{
@@ -41,7 +51,7 @@
             list-style: none;
             display: flex;
             gap: 30px;
-            text-align: center;
+            /* text-align: center; */
         }
         .menu li{
             display: flex;
@@ -55,7 +65,7 @@
             /* position: relative; */
         }
         .submenu{
-            width: 100%;
+            /* width: 100%; */
             background-color: white;
             position: absolute;
             top: 100%;
@@ -63,13 +73,30 @@
             max-height: 0;
             overflow: hidden;
             display: flex;
+            /* height: 20vw; */
+            /* transition: 0.4s ease; */
+        }
+        .active{
+            max-height: 500px;
         }
         .submenu_left{
-            width: 100%;
+            /* width: 100%; */
+            margin: 50px 20px 50px 100px;
+        }
+        .submenu_left ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .left_title{
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         .submenu.is-open{
             width: 100%;
-            max-height: 2000px;
+            /* height: 500px; */
+            max-height: 1000px;
+            transition: all 0.4s;
         }
         .submenu a{
             color: #000;
@@ -96,6 +123,18 @@
         ),url("https://bmw.scene7.com/is/image/BMW/spiderman_NA5_promotion1:16to7?fmt=webp&wid=1919&fit=wrap%2C+1") no-repeat center center / cover;
             
         }
+        .white-header{
+            background-color: white;
+        }
+        .white-header .menu a{ 
+            color:black; 
+        }
+        .white-header .right_menu i{
+            color: #000;
+        }
+        .white-header .logo img{
+            
+        }
     </style>
 
 </head>
@@ -103,7 +142,7 @@
     <header>
         <div class="left_menu">
             <div class="logo">
-                <img src="https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg" alt="">
+                <img class="logoimg" src="https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg" alt="">
             </div>
 
             <div class="menu">
@@ -114,9 +153,14 @@
                         
                         <div class="submenu">
                             <div class="submenu_left">
-                                <a href="">BMW 전기차</a>
-                                <a href="">BMW 순수 전기 모델</a>
-                                <a href="">BMW 플러그인 하이브리드 모델</a>
+                                <ul>
+                                    <li class="left_title"><a href="">BMW 전기차</a></li>
+                                    <li><a href="">BMW 순수 전기 모델</a></li>
+                                    <li><a href="">BMW 플러그인 하이브리드 모델</a></li>
+                                    <li><a href="">BMW i 소울메이트</a></li>
+                                    <li><a href="">BMW BEV MEMBERSHIP</a></li>
+                                    <li><a href="">전기차의 비용</a></li>
+                                </ul>
                             </div>
 
                             <div class="submenu_right">
@@ -142,14 +186,27 @@
     </header>
 
     <script>
-    const electricitycar = document.querySelector('.electricitycar');
-    const submenu = document.querySelector('.submenu');
+        const electricitycar = document.querySelector('.electricitycar');
+        const submenu = document.querySelector('.submenu');
+        const header = document.querySelector('header');
+        const logoimg = document.querySelector('.logoimg');
 
-    electricitycar.addEventListener('click', function() {
-    submenu.classList.toggle('is-open');
-    });
+        electricitycar.addEventListener('click', function() {
+            submenu.classList.toggle('is-open');
+            // submenu.classList.toggle("active");
+            
+            
+            header.classList.toggle('white-header');
+            if (logoimg.src.includes("https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg")){
+                logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+            } else {
+                logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+            }
+        });
 
-
+    // const electricitycar = document.querySelector('');
+    // const submeni =
     </script>
 </body>
 </html>
+
