@@ -219,8 +219,21 @@
         electricitycar.addEventListener('click', function() {
             // submenu.classList.add('open');
             // submenu.classList.remove('close');
-            submenu.classList.toggle("open");
+            // submenu.classList.toggle("open");
             
+            if(submenu.classList.contains("open")){
+                submenu.classList.remove("open");
+                
+            }
+            else{
+                submenu.classList.add("open");
+            }
+
+//             setTimeout(function() {
+//     header.classList.remove('white-header');
+// }, 1000);
+
+
             
             header.classList.toggle('white-header');
             if (logoimg.src.includes("https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg")){
@@ -232,6 +245,46 @@
 
     // const electricitycar = document.querySelector('');
     // const submeni =
+
+
+    // 
+//     const electricitycar = document.querySelector('.electricitycar');
+// const submenu = document.querySelector('.submenu');
+// const header = document.querySelector('header');
+// const logoimg = document.querySelector('.logoimg');
+
+// electricitycar.addEventListener('click', function(e) {
+
+//     // 서브메뉴가 열려 있으면 → 닫기
+//     if (submenu.classList.contains('open')) {
+
+//         submenu.classList.remove('open');
+
+//         // 
+//         // 
+//         // 1초 뒤 헤더 원래 상태로
+//         setTimeout(function() {
+//             header.classList.remove('white-header');
+
+//             logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+//         }, 300);
+
+//     } 
+    
+//     // 서브메뉴가 닫혀 있으면 → 열기
+//     else {
+
+//         submenu.classList.add('open');
+
+//         // 헤더 즉시 흰색
+//         header.classList.add('white-header');
+
+//         logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+//     }
+
+// });
+
+// 
     </script>
 </body>
 </html>
@@ -239,4 +292,3 @@
 전기차를 한번 더 눌렀을때 흰색배경이 1초뒤에 생성
 
        add remove             background none 1s; 
-
