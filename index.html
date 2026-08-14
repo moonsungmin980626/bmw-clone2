@@ -217,31 +217,79 @@
         const logoimg = document.querySelector('.logoimg');
 
         electricitycar.addEventListener('click', function() {
-            // submenu.classList.add('open');
-            // submenu.classList.remove('close');
-            // submenu.classList.toggle("open");
             
-            if(submenu.classList.contains("open")){
-                submenu.classList.remove("open");
-                
-            }
-            else{
-                submenu.classList.add("open");
-            }
 
-//             setTimeout(function() {
-//     header.classList.remove('white-header');
-// }, 1000);
+    // 전기차 메뉴가 열려 있다면
+    if (submenu.classList.contains("open")) {
 
+        // 서브메뉴 닫기
+        submenu.classList.remove("open");
 
-            
-            header.classList.toggle('white-header');
-            if (logoimg.src.includes("https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg")){
-                logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
-            } else {
-                logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
-            }
+        // 1초 뒤에 헤더 흰색 배경 제거
+           setTimeout(() => {
+            header.classList.remove('white-header');
+            logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+        }, 300);
+
+    }
+
+ 
+    // 전기차 메뉴가 닫혀 있다면
+    else {
+
+        // 서브메뉴 열기
+        submenu.classList.add("open");
+
+        // 헤더 흰색으로 변경
+        header.classList.add('white-header');
+
+        // 로고 회색으로 변경
+        logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+    }
+
         });
+
+
+
+
+
+
+
+
+
+
+        //      header.classList.toggle('white-header');
+        //     if (logoimg.src.includes("https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg")){
+        //         logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+        //     } else {
+        //         logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+        //     }
+
+
+        //     if(submenu.classList.contains("open")){
+        //         submenu.classList.remove("open");
+        //         // submenu.classList.add("open");  
+        //         // 이미지 로고 배경색 1초뒤에
+        //         // setTimeout header.classList.remove white-header 1초 뒤
+        //         // logoimg.classList.remove (.logoimg) 1초 뒤에 제거  
+        //            setTimeout(function() {
+        //     header.classList.remove('white-header');
+
+        //     // 로고도 다시 흰색으로
+        //     logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+
+        // }, 1000);
+        //     }
+        //     else{
+        //         submenu.classList.add("open");
+        //         // submenu.classList.remove("open");
+        //          header.classList.add('white-header');
+
+        // // 로고 회색으로 변경
+        // logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+        //     }
+           
+
 
     // const electricitycar = document.querySelector('');
     // const submeni =
@@ -289,6 +337,47 @@
 </body>
 </html>
 
-전기차를 한번 더 눌렀을때 흰색배경이 1초뒤에 생성
+<!-- 전기차를 한번 더 눌렀을때 흰색배경이 1초뒤에 생성
 
        add remove             background none 1s; 
+
+
+       ///
+       const electricitycar = document.querySelector('.electricitycar');
+const submenu = document.querySelector('.submenu');
+const header = document.querySelector('header');
+const logoimg = document.querySelector('.logoimg');
+
+electricitycar.addEventListener('click', function() {
+
+    // 전기차 메뉴가 열려 있다면
+    if (submenu.classList.contains("open")) {
+
+        // 서브메뉴 닫기
+        submenu.classList.remove("open");
+
+        // 1초 뒤에 헤더 흰색 배경 제거
+        setTimeout(function() {
+            header.classList.remove('white-header');
+
+            // 로고도 다시 흰색으로
+            logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg";
+
+        }, 1000);
+
+    }
+
+    // 전기차 메뉴가 닫혀 있다면
+    else {
+
+        // 서브메뉴 열기
+        submenu.classList.add("open");
+
+        // 헤더 흰색으로 변경
+        header.classList.add('white-header');
+
+        // 로고 회색으로 변경
+        logoimg.src = "https://www.bmw.co.kr/content/dam/bmw/common/images/logo-icons/BMW/BMW_Grey-Colour_RGB.svg.asset.1756199978277.svg";
+    } -->
+
+<!-- }); -->
